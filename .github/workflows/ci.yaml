@@ -24,6 +24,9 @@ jobs:
       
       - name: Test
         run: npm run test
+      
+      - name: List resources
+        run: ls
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
