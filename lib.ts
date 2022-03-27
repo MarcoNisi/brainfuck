@@ -1,20 +1,20 @@
 export const validateInput = (str: string) => {
   let openBrackets = 0
-  let closedBrackers = 0
+  let closedBrackets = 0
   let i = 0
   while (i < str.length) {
     if (str[i] === '[') {
       openBrackets++
     }
     if (str[i] === ']') {
-      closedBrackers++
+      closedBrackets++
     }
-    if (closedBrackers > openBrackets) {
+    if (closedBrackets > openBrackets) {
       return false
     }
     i++
   }
-  if (closedBrackers !== openBrackets) {
+  if (closedBrackets !== openBrackets) {
     return false
   }
   return true
@@ -35,7 +35,7 @@ export const positionAfterCurrentLoop = (input: string, currentIndex: number) =>
   }
 }
 
-const MAX = 3000
+const MAX = 30000
 
 export const run = (input: string) => {
   let array = new Uint8Array(MAX)
