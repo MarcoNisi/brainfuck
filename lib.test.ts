@@ -12,6 +12,7 @@ test('validateInput', () => {
 test('positionAfterCurrentLoop', () => {
   expect(positionAfterCurrentLoop('[++]', 0)).toBe(4)
   expect(positionAfterCurrentLoop('[+[]+]', 2)).toBe(4)
+  expect(positionAfterCurrentLoop('', 1)).toBe(undefined)
 })
 
 test('run', () => {
