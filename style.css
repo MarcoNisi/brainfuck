@@ -1,0 +1,41 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#main {
+  width: clamp(40%, 600px, 90%);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+#codeInput, #result {
+  padding: 1em;
+}
+#codeInput {
+  outline: none;
+}
+#error {
+  color: crimson;
+}
+#error.hidden {
+  visibility: hidden;
+}
+#run {
+  cursor: pointer;
+  padding: 0.5em 1em;
+  font-size: 1em;
+}
+#actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#codeInput {
+  border-color: transparent;
+  border-width: 2px;
+}
+#codeInput.invalid {
+  border-color: crimson;
+}
